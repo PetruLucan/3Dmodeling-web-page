@@ -1,0 +1,37 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.quickLinksBar {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    background: orange;
+}
+
+.quickLinksBar li {
+    flex-basis: 10rem;
+    text-align: end;
+    padding: 10px 10px 10px 0px;
+}
+
+.headerLogo {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+.headerLogo p{
+    font-size: 100px;
+}
+.headerLogo h3{
+    text-align: center;
+}
+.meniu ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    font-size: 30px;
+}
