@@ -2,7 +2,10 @@
     margin: 0px;
     padding: 0px;
 }
+.container{
+    background-image: linear-gradient(rgb(216, 236, 245), rgb(104, 167, 245))
 
+}
 .quickLinksBar {
     display: flex;
     justify-content: flex-end;
@@ -16,22 +19,77 @@
     padding: 10px 10px 10px 0px;
 }
 
+form.example {
+    margin: auto;
+    max-width: 300px;
+    display: inherit;
+}
+
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+form.example button:hover {
+    background: #0b7dda;
+}
+
+/* Clear floats */
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 .headerLogo {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    
 }
-.headerLogo p{
+
+.headerLogo p {
     font-size: 100px;
 }
-.headerLogo h3{
+
+.headerLogo h3 {
     text-align: center;
 }
-.meniu ul {
+
+section div.meniu ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
     list-style: none;
     font-size: 30px;
+    /* border-style: outset;
+    border-color: orangered; */
+}
+
+section div.meniu ul li {
+    padding: 12px 45px;
+    margin-bottom: 6px;
+    border-top: 2px solid red;
+    border-bottom: 1px solid gray;
+}
+
+section div.meniu ul li:hover{
+    background: #75b6ebc0;
+    cursor: pointer;
 }
