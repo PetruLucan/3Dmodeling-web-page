@@ -2,10 +2,13 @@
     margin: 0px;
     padding: 0px;
 }
-.container{
-    background-image: linear-gradient(rgb(216, 236, 245), rgb(104, 167, 245))
-
+.hidden{
+    display: none;
 }
+.container {
+    background-image: linear-gradient(rgb(216, 236, 245), rgb(104, 167, 245))
+}
+
 .quickLinksBar {
     display: flex;
     justify-content: flex-end;
@@ -23,6 +26,8 @@ form.example {
     margin: auto;
     max-width: 300px;
     display: inherit;
+    position: relative;
+    right: 25%;
 }
 
 form.example input[type=text] {
@@ -31,7 +36,8 @@ form.example input[type=text] {
     border: 1px solid grey;
     float: left;
     width: 80%;
-    background: #f1f1f1;
+    background: transparent;
+    border-left: none;
 }
 
 form.example button {
@@ -78,18 +84,38 @@ section div.meniu ul {
     align-items: center;
     list-style: none;
     font-size: 30px;
-    /* border-style: outset;
-    border-color: orangered; */
 }
 
 section div.meniu ul li {
     padding: 12px 45px;
-    margin-bottom: 6px;
-    border-top: 2px solid red;
-    border-bottom: 1px solid gray;
+    text-align: center;
+    flex-grow: 2;
+    border: 1px solid red;
+    border-left: none;
 }
 
-section div.meniu ul li:hover{
+section div.meniu ul li:first-child {
+    border-left: 1px solid red;
+    border-bottom: none;
+}
+
+section div.meniu ul li:hover {
     background: #75b6ebc0;
     cursor: pointer;
+}
+
+section div.meniu ul li.active{
+    background: #0972c9e1;
+    cursor: pointer;
+    border-bottom: none;
+}
+
+section div.left, .right {
+    font-size: 100px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    margin:20px;
 }
