@@ -2,9 +2,11 @@
     margin: 0px;
     padding: 0px;
 }
-.hidden{
+
+.hidden {
     display: none;
 }
+
 .container {
     background-image: linear-gradient(rgb(216, 236, 245), rgb(104, 167, 245))
 }
@@ -21,6 +23,11 @@
     text-align: end;
     padding: 10px 10px 10px 0px;
 }
+
+/* button{
+    background: transparent;
+    border: none;
+} */
 
 form.example {
     margin: auto;
@@ -78,7 +85,7 @@ form.example::after {
     text-align: center;
 }
 
-section div.meniu ul {
+section div.styleMeniu ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -86,7 +93,7 @@ section div.meniu ul {
     font-size: 30px;
 }
 
-section div.meniu ul li {
+.inactive {
     padding: 12px 45px;
     text-align: center;
     flex-grow: 2;
@@ -94,28 +101,34 @@ section div.meniu ul li {
     border-left: none;
 }
 
-section div.meniu ul li:first-child {
-    border-left: 1px solid red;
+.active {
+    padding: 12px 45px;
+    text-align: center;
+    flex-grow: 2;
+    border: 1px solid red;
+    background: #0972c9e1;
+    cursor: pointer;
     border-bottom: none;
+    border-left: none;
 }
 
-section div.meniu ul li:hover {
+section div.styleMeniu ul li:first-child {
+    border-left: 1px solid red;
+}
+
+section div.styleMeniu ul li:hover {
     background: #75b6ebc0;
     cursor: pointer;
 }
 
-section div.meniu ul li.active{
-    background: #0972c9e1;
-    cursor: pointer;
-    border-bottom: none;
-}
-
-section div.left, .right {
-    font-size: 100px;
-}
-
-.content {
+#contentWrapper {
     display: flex;
     justify-content: space-around;
-    margin:20px;
+    margin: 20px;
+}
+.content{
+    display: flex;
+}
+section div.left, .right {
+    font-size: 100px;
 }

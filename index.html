@@ -28,74 +28,82 @@
             <div class="headerLogo">
                 <img src="img/logo3D.jpg" alt="">
                 <p>Modeling 3D Online</p>
-                <!-- <span>Turn 2D images into a 3D work piece.</span> -->
             </div>
-            <div class="meniu">
-                <ul>
-                    <li id="navBar" class="navBar">Home</li>
-                    <li id="navBar" class="navBar">Sample</li>
-                    <li id="navBar" class="navBar">Projects</li>
-                    <li id="navBar" class="navBar">Contacts</li>
+            <div class="styleMeniu">
+                <ul id="meniu">
+                    <li class="inactive" onclick="onMenuClick(this)">Home</li>
+                    <li class="inactive" onclick="onMenuClick(this)">Preview</li>
+                    <li class="inactive" onclick="onMenuClick(this)">Projects</li>
+                    <li class="inactive" onclick="onMenuClick(this)">Contacts</li>
                 </ul>
             </div>
         </section>
+        <!-- <button id="test">etst</button> -->
         <!-- Home Section -->
-        <section class="content">
-            <div class="left">
-                <p>Content</p>
-                <p>Content</p>
-                <p>Content</p>
-            </div>
-            <div class="right">
-                <p>Content</p>
-                <p>Content</p>
-                <p>Content</p>
-            </div>
-        </section>
-        <!-- Sample Section -->
-        <section class="content">
-            <div class="contentWrapper hidden">
-                <div class="left">
-                    <p>Content</p>
-                    <p>Content</p>
-                    <p>Content</p>
-                </div>
-                <div class="right">
-                    <p>Content</p>
-                    <p>Content</p>
-                    <p>Content</p>
+        <section id="contentWrapper">
+            <div id="homeContent" class="hidden">
+                <div class="content">
+                    <div class="left">
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                    </div>
+                    <div class="right">
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                    </div>
                 </div>
             </div>
-        </section>
-        <!-- Projects Section -->
-        <section class="content">
-            <div class=" contentWrapper hidden">
-                <div class="left">
-                    <p>Content</p>
-                    <p>Content</p>
-                    <p>Content</p>
+
+<!-- Preview Section -->
+            <div id="previewContent" class="hidden">
+                <div class="content ">
+                    <div class="left">
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                    </div>
+                    <div class="right">
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                    </div>
                 </div>
-                <div class="right">
-                    <p>Content</p>
-                    <p>Content</p>
-                    <p>Content</p>
+            </div> 
+
+                <!-- Projects Section -->
+                <div id="projectsContent" class="hidden"></div>
+                <div class="content">
+                    <div class="left">
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                    </div>
+                    <div class="right">
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                    </div>
                 </div>
             </div>
-        </section>
-        <!-- Contacts Section -->
-        <section class="content">
-            <div class=" contentWrapper hidden">
-                <div class="left">
-                    <p>Content</p>
-                    <p>Content</p>
-                    <p>Content</p>
-                </div>
-                <div class="right">
-                    <p>Content</p>
-                    <p>Content</p>
-                    <p>Content</p>
+
+<!-- Contacts Section -->
+            <div id="contactsContent" class="hidden">
+                <div class="content">
+                    <div class="left">
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                    </div>
+                    <div class="right">
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                    </div>
                 </div>
             </div>
+
         </section>
 
 
