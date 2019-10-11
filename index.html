@@ -26,86 +26,82 @@
         </header>
         <section>
             <div class="headerLogo">
-                <img src="img/logo3D.jpg" alt="">
+                <img src="img/logo3Dd.jpg" alt="">
                 <p>Modeling 3D Online</p>
             </div>
             <div class="styleMeniu">
                 <ul id="meniu">
-                    <li class="inactive" onclick="onMenuClick(this)">Home</li>
-                    <li class="inactive" onclick="onMenuClick(this)">Preview</li>
-                    <li class="inactive" onclick="onMenuClick(this)">Projects</li>
-                    <li class="inactive" onclick="onMenuClick(this)">Contacts</li>
+                    <li onclick="toggle('homeContent')" class="inactive">Home</li>
+                    <li onclick="toggle('previewContent')" class="inactive">Preview</li>
+                    <li onclick="toggle('projectsContent')" class="inactive">Projects</li>
+                    <li onclick="toggle('contactsContent')" class="inactive">Contacts</li>
                 </ul>
             </div>
         </section>
-        <!-- <button id="test">etst</button> -->
+
         <!-- Home Section -->
         <section id="contentWrapper">
-            <div id="homeContent" class="hidden">
-                <div class="content">
-                    <div class="left">
-                        <p>Content</p>
-                        <p>Content</p>
-                        <p>Content</p>
-                    </div>
-                    <div class="right">
-                        <p>Content</p>
-                        <p>Content</p>
-                        <p>Content</p>
-                    </div>
+            <div id="homeContent"  class="content">
+                <div class="left">
+                    <p>Home Content</p>
+                    <p>Home Content</p>
+                    <p>Home Content</p>
+                </div>
+                <div class="right">
+                    <p>Home Content</p>
+                    <p>Home Content</p>
+                    <p>Home Content</p>
                 </div>
             </div>
 
-<!-- Preview Section -->
-            <div id="previewContent" class="hidden">
-                <div class="content ">
-                    <div class="left">
-                        <p>Content</p>
-                        <p>Content</p>
-                        <p>Content</p>
-                    </div>
-                    <div class="right">
-                        <p>Content</p>
-                        <p>Content</p>
-                        <p>Content</p>
-                    </div>
+            <div id="previewContent" style="display:none;" class="content">
+                <div class="left">
+                    <p>Preview Content</p>
+                    <p>Preview Content</p>
+                    <p>Preview Content</p>
                 </div>
-            </div> 
-
-                <!-- Projects Section -->
-                <div id="projectsContent" class="hidden"></div>
-                <div class="content">
-                    <div class="left">
-                        <p>Content</p>
-                        <p>Content</p>
-                        <p>Content</p>
-                    </div>
-                    <div class="right">
-                        <p>Content</p>
-                        <p>Content</p>
-                        <p>Content</p>
-                    </div>
+                <div class="right">
+                    <p>Preview Content</p>
+                    <p>Preview Content</p>
+                    <p>Preview Content</p>
                 </div>
             </div>
 
-<!-- Contacts Section -->
-            <div id="contactsContent" class="hidden">
-                <div class="content">
-                    <div class="left">
-                        <p>Content</p>
-                        <p>Content</p>
-                        <p>Content</p>
-                    </div>
-                    <div class="right">
-                        <p>Content</p>
-                        <p>Content</p>
-                        <p>Content</p>
-                    </div>
+            <!-- Projects Section -->
+            <div id="projectsContent" style="display:none;" class="content">
+                <div class="left">
+                    <p>Projects Content</p>
+                    <p>Projects Content</p>
+                    <p>Projects Content</p>
+                </div>
+                <div class="right">
+                    <p>Projects Content</p>
+                    <p>Projects Content</p>
+                    <p>Projects Content</p>
                 </div>
             </div>
 
+            <!-- Contacts Section -->
+            <div id="contactsContent" style="display:none;" class="content">
+                <div class="left">
+                    <p>Contacts Content</p>
+                    <p>Contacts Content</p>
+                    <p>Contacts Content</p>
+                </div>
+                <div class="right">
+                    <p>Contacts Content</p>
+                    <p>Contacts Content</p>
+                    <p>Contacts Content</p>
+                </div>
+            </div>
         </section>
-
+        <!-- FOOTER -->
+        <footer>
+            <div>pateners</div>
+            <div>
+                facebook and other stuff
+            </div>
+        </footer>
 
     </div>
 

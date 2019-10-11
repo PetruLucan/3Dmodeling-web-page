@@ -1,34 +1,47 @@
-var getHomeContentEl = document.getElementById('homeContent');
-var getPreviewContentEl = document.getElementById('previewContent');
-var getProjectsContentEl = document.getElementById('projectsContent');
-var getContactsContentEl = document.getElementById('contactsContent');
-var allLiElements = document.getElementById('meniu').children;
-var getContentEl = document.getElementById('contentWrapper').children;
-var test = document.getElementById('test');
-// var testContent = document.getElementById('testContent');
 
+var getContentElement = document.getElementById('contentWrapper');
+var menu = document.getElementById('meniu');
+menu.addEventListener('click', onMenuClick);
 
+function onMenuClick(e) {
 
+    if (e.target.tagName === 'LI') {
 
+        // am dat click pe un element de tip <li>
+        const allLiElements = menu.querySelectorAll('li');
 
+        for (let i = 0; i < allLiElements.length; i++) {
 
-function onMenuClick(el) {
-
-    for (let i = 0; i < allLiElements.length; i++) {
-        allLiElements[i].className = "inactive";
-
+            // scoatem clasa de pe celelalte
+            allLiElements[i].classList.remove('active');
+        }
+        e.target.classList.add('active'); // o punem pe cel nou selectat
     }
-    el.className = "active";
-
-    onClick()
-
+   
+    // let datasetContent = e.target.dataset.content;
+    // let useThis = document.getElementById('datasetContent')
+    // useThis.classList.remove('hidden')
 }
-function onClick() {
-    for (let j = 0; j < getContentEl; j++) {
-        getContentEl[i].className = 'hidden';
 
+
+function toggle(target) {
+
+    var artz = document.getElementsByClassName('content');
+    var targ = document.getElementById(target);
+    var isVis = targ.style.display == 'block';
+
+    // hide all content
+    for (var i = 0; i < artz.length; i++) {
+        artz[i].style.display = 'none';
     }
-    getContentEl.className = "content";
-    // testContent.classList.add('content')
+    // display current content
+    targ.style.display = isVis ? 'none' : 'flex';
 
+    return false;
 }
+
+
+
+
+
+

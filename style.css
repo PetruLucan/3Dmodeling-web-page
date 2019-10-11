@@ -1,6 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    
 }
 
 .hidden {
@@ -24,10 +25,6 @@
     padding: 10px 10px 10px 0px;
 }
 
-/* button{
-    background: transparent;
-    border: none;
-} */
 
 form.example {
     margin: auto;
@@ -106,7 +103,7 @@ section div.styleMeniu ul {
     text-align: center;
     flex-grow: 2;
     border: 1px solid red;
-    background: #0972c9e1;
+    background: #75b6ebc0;
     cursor: pointer;
     border-bottom: none;
     border-left: none;
@@ -131,4 +128,11 @@ section div.styleMeniu ul li:hover {
 }
 section div.left, .right {
     font-size: 100px;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    font-size: 40px;
+    background-color: orangered;
+    
 }
