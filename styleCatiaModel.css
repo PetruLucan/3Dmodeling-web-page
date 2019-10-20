@@ -20,12 +20,13 @@
     }
 }
 .imageSpin{
+    height:500px;
     animation-name:spin;
     animation-timing-function: linear;
-    animation-iteration-count: infinte;
+    animation-iteration-count:infinite;
     animation-duration:5s;
     -webkit-animation-name:spin;
     -webkit-animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinte;
+    -webkit-animation-iteration-count: infinite;
     -webkit-animation-duration:5s;
 }
