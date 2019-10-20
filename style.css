@@ -1,11 +1,14 @@
 * {
     margin: 0px;
     padding: 0px;
-    
 }
 
 .hidden {
     display: none;
+}
+
+img {
+    width: 20%;
 }
 
 .container {
@@ -24,7 +27,6 @@
     text-align: end;
     padding: 10px 10px 10px 0px;
 }
-
 
 form.example {
     margin: auto;
@@ -71,7 +73,8 @@ form.example::after {
 .headerLogo {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    margin-bottom: 5%;
 }
 
 .headerLogo p {
@@ -123,16 +126,20 @@ section div.styleMeniu ul li:hover {
     justify-content: space-around;
     margin: 20px;
 }
-.content{
+
+.content {
     display: flex;
 }
+
 section div.left, .right {
     font-size: 100px;
 }
-footer{
+
+footer ul{
     display: flex;
-    justify-content: space-between;
-    font-size: 40px;
+    justify-content: space-around;
+    font-size: 30px;
     background-color: orangered;
-    
+    list-style: none;
+    padding: 2rem;
 }

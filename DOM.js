@@ -28,14 +28,13 @@ function toggle(target) {
 
     var artz = document.getElementsByClassName('content');
     var targ = document.getElementById(target);
-    var isVis = targ.style.display == 'block';
 
     // hide all content
     for (var i = 0; i < artz.length; i++) {
         artz[i].style.display = 'none';
     }
     // display current content
-    targ.style.display = isVis ? 'none' : 'flex';
+    targ.style.display = 'flex';
 
     return false;
 }
