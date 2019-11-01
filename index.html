@@ -9,13 +9,13 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="styleCatiaModel.css">
     </link>
-    
+
     <title>Modeling3D Online</title>
 </head>
 
 <body>
     <div class="container">
-        <header class="headContent">
+        <!-- <header class="headContent">
             <ul class="quickLinksBar">
                 <form class="example" action="/action_page.php">
                     <input type="text" placeholder="Search..." name="search2">
@@ -25,23 +25,29 @@
                 <li>Mobile: 0756564365</li>
                 <li>modeling3D.online@gmail.com</li>
             </ul>
-        </header>
-        <section>
+        </header> -->
+
+        <nav>
             <div class="headerLogo">
 
                 <p>Modeling</p>
                 <img src="img/logo3D.png" alt="">
                 <p>Online</p>
             </div>
-            <div class="styleMeniu">
-                <ul id="meniu">
-                    <li onclick="toggle('homeContent')" class="inactive">Home</li>
-                    <li onclick="toggle('previewContent')" class="inactive">Preview</li>
-                    <li onclick="toggle('projectsContent')" class="inactive">Projects</li>
-                    <li onclick="toggle('contactsContent')" class="inactive">Contacts</li>
-                </ul>
+
+            <ul class="nav-links" id="meniu">
+                <li onclick="toggle('homeContent')" class="inactive"><a href="#">Home</a></li>
+                <li onclick="toggle('previewContent')" class="inactive"><a href="#">Preview</a></li>
+                <li onclick="toggle('projectsContent')" class="inactive"><a href="#">Projects</a></li>
+                <li onclick="toggle('contactsContent')" class="inactive"><a href="#">Contacts</a></li>
+            </ul>
+
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
             </div>
-        </section>
+        </nav>
 
         <!-- Home Section -->
         <section id="contentWrapper">
@@ -108,7 +114,7 @@
         </footer>
 
     </div>
-    
+
     <script type="text/javascript" src="DOM.js"></script>
 </body>
 

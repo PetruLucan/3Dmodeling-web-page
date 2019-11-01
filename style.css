@@ -7,8 +7,11 @@
     display: none;
 }
 
-section div.headerLogo img {
+nav div.headerLogo img {
     width: 20%;
+}
+div.left img{
+    height:40vh;
 }
 
 .container {
@@ -29,11 +32,9 @@ section div.headerLogo img {
 }
 
 form.example {
-    margin: auto;
+    margin-right: auto;
     max-width: 300px;
     display: inherit;
-    position: relative;
-    right: 25%;
 }
 
 form.example input[type=text] {
@@ -85,40 +86,106 @@ form.example::after {
     text-align: center;
 }
 
-section div.styleMeniu ul {
+.nav-links {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    min-height: 5vh;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #5D4954;
+    padding: 12px 45px;
+}
+
+.nav-links li {
     list-style: none;
-    font-size: 30px;
 }
 
-.inactive {
-    padding: 12px 45px;
-    text-align: center;
-    flex-grow: 2;
-    border: 1px solid red;
-    border-left: none;
+.nav-links a {
+    color: rgb(192, 190, 190);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 20px;
 }
 
-.active {
-    padding: 12px 45px;
-    text-align: center;
-    flex-grow: 2;
-    border: 1px solid red;
-    background: #75b6ebc0;
+.burger {
+    display: none;
     cursor: pointer;
-    border-bottom: none;
-    border-left: none;
 }
 
-section div.styleMeniu ul li:first-child {
-    border-left: 1px solid red;
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: rgb(192, 190, 190);
+    margin: 5px;
+    transition: all 0.5s ease;
 }
 
-section div.styleMeniu ul li:hover {
-    background: #75b6ebc0;
-    cursor: pointer;
+@media screen and (max-width:1024px) {
+    .headerLogo p {
+        font-size: 40px;
+    }
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width:768px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 75vh;
+        background-color: #5D4954;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 10%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-4px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-4px, -6px);
 }
 
 #contentWrapper {
@@ -135,7 +202,7 @@ section div.left, .right {
     font-size: 100px;
 }
 
-footer ul{
+footer ul {
     display: flex;
     justify-content: space-around;
     font-size: 30px;
