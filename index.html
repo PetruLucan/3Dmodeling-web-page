@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Alegreya Sans' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="styleCatiaModel.css">
     </link>
@@ -15,31 +16,67 @@
 
 <body>
     <div class="container">
-        <!-- <header class="headContent">
+        <header id="myHeader" class="headContent">
             <ul class="quickLinksBar">
-                <form class="example" action="/action_page.php">
-                    <input type="text" placeholder="Search..." name="search2">
+                <img id="headerImg" src="img/logo3D.png" alt="">
+                <li>
+                    <button class="headerBtn" href="#">Recently Viewed</button class="headerBtn">
+                </li>
+                <li>
+                    <button class="headerBtn" id="serviceTrigger" class="serviceMenuTrigger" href="#"
+                        data-menu>Service</button class="headerBtn">
+                    <div id="servicePanel" class="menuDropdown">
+                        <span class="arrow"></span>
+                        <div>Call:0756564365</div>
+                        <div>E-mail:modeling3D.online@gmail.com</div>
+                        <div>Address:Str. Fericirii, Nr. 4</div>
+                    </div>
+                </li>
+                <li>
+                    <button class="headerBtn" id="loginTrigger" class="loginMenuTrigger" href="#"
+                        data-menu>Login</button class="headerBtn">
+                    <form id="loginPanel" class="menuDropdown">
+                        <span class="arrow"></span>
+                        <input class="input-field" placeholder="USERNAME">
+                        <input class="input-field" placeholder="PASSWORD">
+                        <button class="button-text">LOGIN</button>
+                        <div class="field">
+                            <a>Reset password</a>
+                            <a>Forgot your username?</a>
+                        </div>
+                        <div class="footer">
+                            <div class="field">
+                                Don't have an account?
+                            </div>
+                            <a class="button-text">Register</a>
+                        </div>
+                    </form>
+                </li>
+                <li>
+                    <button style="border-right:none" class="headerBtn" href="#">MyOrders</button>
+                </li>
+            </ul>
+        </header>
+
+        <nav id="myContent">
+            <div class="headerNav">
+                <div class="logoWrap">
+                    <p>Modeling</p>
+                    <img src="img/logo3D.png" alt="">
+                    <p>Online</p>
+                </div>
+                <form class="searchBar" action="/action_page.php">
+                    <input type="text" placeholder="Enter a keyword, a series, a product code" name="search2">
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
-                <li>Recently viewed</li>
-                <li>Mobile: 0756564365</li>
-                <li>modeling3D.online@gmail.com</li>
-            </ul>
-        </header> -->
-
-        <nav>
-            <div class="headerLogo">
-
-                <p>Modeling</p>
-                <img src="img/logo3D.png" alt="">
-                <p>Online</p>
             </div>
 
-            <ul class="nav-links" id="meniu">
+            <ul class="nav-menu" id="meniu">
                 <li onclick="toggle('homeContent')" class="inactive"><a href="#">Home</a></li>
                 <li onclick="toggle('previewContent')" class="inactive"><a href="#">Preview</a></li>
-                <li onclick="toggle('projectsContent')" class="inactive"><a href="#">Projects</a></li>
-                <li onclick="toggle('contactsContent')" class="inactive"><a href="#">Contacts</a></li>
+                <li style="border-right:none" onclick="toggle('projectsContent')" class="inactive"><a
+                        href="#">Projects</a></li>
+
             </ul>
 
             <div class="burger">
@@ -51,57 +88,66 @@
 
         <!-- Home Section -->
         <section id="contentWrapper">
+
             <div id="homeContent" class="content">
-                <div class="left">
-                    <img src="img/logo3D.png" class="imageSpin">
+                <div class="home-text">
+                    <h3>Showcase</h3>
+                    <h2>your product</h2>
+                    <h3>at it's maximum potential!!</h3>
                 </div>
-                <!-- <div class="right">
-                    <p>Home Content</p>
-                    <p>Home Content</p>
-                    <p>Home Content</p>
-                </div> -->
+                <div class="left">
+                    <img src="img/logo3D.png" class="imgSpin imageSpin">
+                </div>
+
+                <div class="home-text">
+                    <h3>Turn your 2D image</h3>
+                    <h2>into a 3D</h2>
+                    <h3>with adjustable angles.</h3>
+                </div>
             </div>
 
             <div id="previewContent" style="display:none;" class="content">
                 <div class="left">
-                    <p>Preview Content</p>
-                    <p>Preview Content</p>
-                    <p>Preview Content</p>
+                    <p>Your 2D sample!</p>
+                    <div class="model-sample">
+
+                    </div>
                 </div>
+                <i class="settingsWheel fa fa-gear fa-spin"></i>
                 <div class="right">
-                    <p>Preview Content</p>
-                    <p>Preview Content</p>
-                    <p>Preview Content</p>
+                    <p>Your 3D model!</p>
+                    <div class="model-sample">
+
+                    </div>
                 </div>
+                <button data-text="More Samples" class="more-sampleBtn">More Samples</button>
             </div>
 
             <!-- Projects Section -->
             <div id="projectsContent" style="display:none;" class="content">
                 <div class="left">
-                    <p>Projects Content</p>
-                    <p>Projects Content</p>
-                    <p>Projects Content</p>
+                    <p>Project Description</p>
+                    <div class="model-sample">
+
+                    </div>
+                    <p>Project Description</p>
+                    <div class="model-sample">
+
+                    </div>
                 </div>
+
                 <div class="right">
-                    <p>Projects Content</p>
-                    <p>Projects Content</p>
-                    <p>Projects Content</p>
+                    <p>Project Description</p>
+                    <div class="model-sample">
+
+                    </div>
+                    <p>Project Description</p>
+                    <div class="model-sample">
+
+                    </div>
                 </div>
             </div>
 
-            <!-- Contacts Section -->
-            <div id="contactsContent" style="display:none;" class="content">
-                <div class="left">
-                    <p>Contacts Content</p>
-                    <p>Contacts Content</p>
-                    <p>Contacts Content</p>
-                </div>
-                <div class="right">
-                    <p>Contacts Content</p>
-                    <p>Contacts Content</p>
-                    <p>Contacts Content</p>
-                </div>
-            </div>
         </section>
         <!-- FOOTER -->
         <footer>
@@ -115,7 +161,7 @@
 
     </div>
 
-    <script type="text/javascript" src="DOM.js"></script>
+    <script type="text/javascript" src="main.js"></script>
 </body>
 
 </html>

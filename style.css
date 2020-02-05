@@ -1,21 +1,11 @@
 * {
     margin: 0px;
     padding: 0px;
+    /* font-family: 'optima'; */
 }
 
 .hidden {
     display: none;
-}
-
-nav div.headerLogo img {
-    width: 20%;
-}
-div.left img{
-    height:40vh;
-}
-
-.container {
-    background-image: linear-gradient(rgb(216, 236, 245), rgb(104, 167, 245))
 }
 
 .quickLinksBar {
@@ -25,87 +15,323 @@ div.left img{
     background: orange;
 }
 
-.quickLinksBar li {
-    flex-basis: 10rem;
-    text-align: end;
-    padding: 10px 10px 10px 0px;
+ul.quickLinksBar li {
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    flex-basis: 8rem;
+    text-align: center;
+    height:2.5rem;
 }
 
-form.example {
-    margin-right: auto;
-    max-width: 300px;
-    display: inherit;
+ul.quickLinksBar li:hover {
+    background-color: #024B77CF;
+    /* color: white; */
+    /* border: 1px solid black;
+    border-width: 0 2px 0 1px; */
+    /* cursor: pointer; */
 }
-
-form.example input[type=text] {
-    padding: 10px;
-    font-size: 17px;
-    border: 1px solid grey;
-    float: left;
-    width: 80%;
-    background: transparent;
-    border-left: none;
-}
-
-form.example button {
-    float: left;
-    width: 20%;
-    padding: 10px;
-    background: #2196F3;
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-left: none;
+.headerBtn:hover{
+    color: rgb(218, 214, 214);
+    border: none;
     cursor: pointer;
+    text-decoration: underline;
 }
 
-form.example button:hover {
-    background: #0b7dda;
+ul.quickLinksBar li button.headerBtn {
+    width: 100%;
+    background: transparent;
+    border: solid black;
+    font-size: 16px;
+    /* font-family: 'optima'; */
+    border-width: 0 1px 0 0;
+    margin: 2px 0 2px 0;
+    
 }
 
-/* Clear floats */
-
-form.example::after {
-    content: "";
-    clear: both;
-    display: table;
+.settingsWheel {
+    color: #296f6fbd;
+    font-size: 48px;
+    -webkit-animation: fa-spin 8s infinite linear;
 }
 
-.headerLogo {
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+.sticky+.content {
+    padding-top: 102px;
+}
+
+.container {
+    background-image: linear-gradient(rgb(255, 255, 255), rgba(174, 227, 215, 0.57));
+}
+
+.menuDropdown {
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: 0 5px 22px #e9e9e9;
+    min-height: 8rem;
+    top: 38px;
+    z-index: 999;
+    background: #fff;
+    position: absolute;
+    padding: 20px;
+    border: 1px solid #f0f0f0;
+    color: #666;
+    text-transform: none;
+}
+
+div.menuDropdown button {
+    vertical-align: middle;
+    border: 1px solid #d3d3d3;
+    border-width: 0 0 1px 0;
+    padding: 7px;
+    color: #999;
+}
+
+span.arrow {
+    background: url(img/baloon.png?i=20180219) left top no-repeat;
+    position: absolute;
+    top: -8px;
+    width: 15px;
+    height: 8px;
+    left: 140px;
+}
+
+.input-field {
+    width: 100%;
+    min-width: 250px;
+    box-sizing: border-box;
+    border-radius: 0;
+    font-size: 12px;
+    padding: 6px;
+    border: 1px solid #bfbfbf;
+    margin: 10px 0 10px 0;
+}
+
+.button-text {
+    width: 100%;
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 14px;
+    line-height: 24px;
+    color: white;
+    background: orange;
+}
+
+.menuDropdown .footer {
+    border-top: 1px solid #bfbfbf;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+div.field, div.field a {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.headerNav {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 5%;
 }
 
-.headerLogo p {
-    font-size: 100px;
+ul.quickLinksBar img {
+    width: 50px;
+    position: absolute;
+    left: 20%;
 }
 
-.headerLogo h3 {
-    text-align: center;
+div.headerNav img {
+    width: 20%;
 }
 
-.nav-links {
+div.logoWrap {
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem;
+    color: #4f440c;
+}
+
+form.searchBar {
+    width: 30rem;
+    display: inherit;
+}
+
+::placeholder {
+    opacity: 0.2;
+}
+
+form.searchBar input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid rgba(128, 128, 128, 0.836);
+    float: left;
+    width: 100%;
+    background: transparent;
+}
+
+form.searchBar button {
+    float: left;
+    width: 15%;
+    padding: 10px;
+    background: rgba(255, 166, 0, 0.76);
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+form.searchBar button:hover {
+    background: #024B77CF;
+}
+
+/* Clear floats */
+
+form.searchBar::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.headerNav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+nav div.headerNav img {
+    width: 20%;
+}
+
+.nav-menu {
     display: flex;
     justify-content: space-around;
     align-items: center;
     min-height: 5vh;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #5D4954;
+    font-family: 'optima';
+    background-color: #024B77CF;
     padding: 12px 45px;
 }
 
-.nav-links li {
+.nav-menu li {
     list-style: none;
+    border: 1px solid;
+    padding: 10px 200px 10px 200px;
+    border-width: 0px 1px 0px 0px;
 }
 
-.nav-links a {
+.menu-active {
+    display: flex;
+}
+
+.nav-menu a {
     color: rgb(192, 190, 190);
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: bold;
     font-size: 20px;
+}
+
+.nav-menu li a:hover {
+    color: orange;
+    text-decoration: underline;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.model-sample {
+    border: 1px solid;
+    margin: 10px 0 10px 0;
+    height: 30rem;
+    width: 40rem;
+}
+
+.more-sampleBtn {
+    height: 55px;
+    width: 140px;
+    text-align: center;
+    font-family: fantasy;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5%;
+    position: relative;
+    background: #024B77CF;
+    top: 20px;
+    line-height: 55px;
+}
+
+.more-sampleBtn:before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+    text-align: center;
+    background: orange;
+    color: #024B77CF;
+    transition: 0.5s;
+    transform-origin: bottom;
+    transform: translateY(-100%) rotateX(90deg);
+}
+
+.more-sampleBtn:hover:before {
+    transform: translateY(0) rotateX(0);
+}
+
+.more-sampleBtn:after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+    text-align: center;
+    /* background: #001; */
+    color: rgb(192, 190, 190);
+    transition: 0.5;
+    transform-origin: top;
+    transform: translateY(0) rotateX(0);
+}
+
+.more-sampleBtn:hover:after {
+    transform: translateY(100%) rotateX(90deg);
+}
+
+div.left img.imgSpin {
+    -webkit-animation-duration: 30s;
+}
+
+.home-text {
+    text-align: center;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #024B77CF;
+}
+
+div.home-text h2 {
+    padding: 60px 0 60px 0;
 }
 
 .burger {
@@ -121,11 +347,21 @@ form.example::after {
     transition: all 0.5s ease;
 }
 
+footer ul {
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
+    background: orange;
+    list-style: none;
+    padding: 2rem;
+    color: #26220b;
+}
+
 @media screen and (max-width:1024px) {
-    .headerLogo p {
+    .headerNav p {
         font-size: 40px;
     }
-    .nav-links a {
+    .nav-menu a {
         font-size: 0.8rem;
     }
 }
@@ -134,7 +370,7 @@ form.example::after {
     body {
         overflow-x: hidden;
     }
-    .nav-links {
+    .nav-menu {
         position: absolute;
         right: 0px;
         height: 75vh;
@@ -146,10 +382,10 @@ form.example::after {
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
     }
-    .nav-links a {
+    .nav-menu a {
         font-size: 0.8rem;
     }
-    .nav-links li {
+    .nav-menu li {
         opacity: 0;
     }
     .burger {
@@ -190,23 +426,12 @@ form.example::after {
 
 #contentWrapper {
     display: flex;
-    justify-content: space-around;
     margin: 20px;
-}
-
-.content {
-    display: flex;
+    /* background-image: url(img/contentBg.jpg); */
 }
 
 section div.left, .right {
-    font-size: 100px;
-}
-
-footer ul {
-    display: flex;
-    justify-content: space-around;
-    font-size: 30px;
-    background-color: orangered;
-    list-style: none;
-    padding: 2rem;
+    font-size: 40px;
+    text-align: center;
+    color: #024B77CF;
 }
